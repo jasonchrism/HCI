@@ -1,0 +1,78 @@
+/* box sizing : border box supaya paddingnya rapi */
+/* responsive unit
+    vw : width layar, 100vw = 1 layar
+    vh : heigth layar
+    %  : parent */
+
+*{ /* semua elemen */
+    box-sizing: border-box;
+    /* margin supaya full screen imagenya */
+    margin: 0;
+}
+
+#navBar{
+    display: flex;
+    /* flex-direction: column; supaya sejajar ke bawah*/
+    justify-content: space-between; /* ngeratain elemen */
+}
+
+#nav{
+    position: sticky;
+    top: 0;
+}
+
+@media screen and (max-width: 600px){
+    #navMenuItems{
+        position: absolute;
+        background-color: wheat;
+        /* display: none; */
+        left: -100px;
+        transition: all .5s;
+    }
+
+    #navMenu:hover #navMenuItems{ /*parent dari navMenuButton dan navMenuItems */
+        /* display: block; */
+        left: 0;
+    }
+} 
+
+body{
+    
+}
+
+.jumbotron{
+
+}
+
+#jumbotron1{
+    background-image:
+        linear-gradient(#0000,#abc),
+        url("assets/onepiece.jpg");
+    background-size: cover;
+    background-position: center;
+    height: calc(30vw + 300px);
+}
+
+#jumbotron1 img{
+    width: 300px;
+}
+
+.button1{
+    padding: 20px;
+    border-radius: 100px;
+    transition: all .5s;
+}
+
+.button1:hover{
+    background-color: orange;
+}
+
+.button2{
+    padding: 20px;
+    border-radius: 100px;
+    transition: all .5s;
+}
+
+.button2:hover{
+    background-color: gold;
+}
